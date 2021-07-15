@@ -1,0 +1,7 @@
+Name=Suryanarayana
+echo $Name
+
+
+Date=$(date +%F)
+
+echo Today date is $Date
