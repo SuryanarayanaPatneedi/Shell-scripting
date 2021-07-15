@@ -5,3 +5,6 @@ echo $Name
 Date=$(date +%F)
 
 echo Today date is $Date
+
+present=$(pwd)
+echo I am $present
