@@ -7,4 +7,4 @@ Date=$(date +%F)
 echo Today date is $Date
 
 present=$(pwd)
-echo I am $present
+echo I am =$present
