@@ -9,5 +9,5 @@ sample(){
 }
 #call the function
 a=200
-echo value of b=${b}
+echo value of b = ${b}
 sample
