@@ -1,3 +1,9 @@
 #!/bin/bash
 
-echo Suryanarayana
+sample()
+{
+
+  echo I am Surya, This is sample function
+}
+#call the function
+sample
