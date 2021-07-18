@@ -4,5 +4,5 @@ a=10
 
 echo $a
 
-B=Surya
+B = Surya
 echo B = $B
