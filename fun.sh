@@ -4,7 +4,7 @@ sample() {
 
   echo Hello, I am a sample function
   echo the value of a=$a
-  b=Patneedi
+  b=200
 
 }
 a=Suryanarayana
