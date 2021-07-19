@@ -3,7 +3,7 @@
 sample() {
   echo Hello , I am a Sample function
   echo Value of a = ${a}
-  b=200
+  b=patneedi
 
 }
 
