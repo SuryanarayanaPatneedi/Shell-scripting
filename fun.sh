@@ -1,12 +1,15 @@
 #!/bin/bash
 
 sample() {
-
-  echo Hello, I am a sample function
-  echo the value of a=$a
+  echo Hello , I am a Sample function
+  echo Value of a = ${a}
   b=200
 
 }
-a=Suryanarayana
-sample
-echo value of b = b{$}
+
+## Main Program
+
+## Call the function
+a=100
+sample ABC
+echo Value of b = ${b}
