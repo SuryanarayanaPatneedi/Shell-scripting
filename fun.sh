@@ -9,4 +9,4 @@ sample() {
 }
 a=Suryanarayana
 sample
-echo value of b=b$
+echo value of b=b{$}
