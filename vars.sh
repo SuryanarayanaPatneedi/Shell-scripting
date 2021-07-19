@@ -11,7 +11,7 @@ echo Number of users $No_of_Users
 
 #Date with command substitution
 
-DATE = $(date +%F)
+DATE=$(date +%F)
 
 echo Welcome ,Today date is $DATE
 
