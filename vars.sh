@@ -15,4 +15,6 @@ DATE=$(date +%F)
 
 echo Welcome ,Today date is $DATE
 
-# It is jst for checking .
+# It is jst for checking.
+
+echo course name =${COURSE_NAME}
