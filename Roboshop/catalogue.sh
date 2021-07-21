@@ -7,6 +7,7 @@ STAT_CHECK $?
 
 print "Adding roboshop user"
 useradd roboshop
+STAT_CHECK $?
 
 
 
