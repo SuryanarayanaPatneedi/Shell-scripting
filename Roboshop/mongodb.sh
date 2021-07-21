@@ -13,21 +13,17 @@ STAT_CHECK $?
 print "Install mongodb\t"
 yum install -y mongodb-org &>>LOG
 STAT_CHECK $?
- # systemctl enable mongod
-# systemctl start mongod
-#Update Liste IP address from 127.0.0.1 to 0.0.0.0 in config file
-#Config file: /etc/mongod.conf
 
-#then restart the service
+print "updating Mongodb listen  Address"
+sed -i -e 's/127.0.0.1/0.0.0.0' /ete/mongod.conf
+STAT_CHECK $?
 
-# systemctl restart mongod
-#Every Database needs the schema to be loaded for the application to work.
-#Download the schema and load it.
+print "Start mongodb service"
+systemctl enable mongod &>>LOG && systemctl start mongod &>>LOG
 
-# curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+print "Downloading mongodb schema "
+curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"  &>>LOG
+STAT_CHECK $?
 
-# cd /tmp
-# unzip mongodb.zip
-# cd mongodb-main
-# mongo < catalogue.js
-# mongo < users.js
+print "Load mongodb schema"
+cd /tmp && unzip mongodb.zip && cd mongodb-main  && mongo < catalogue.js && mongo < users.js
