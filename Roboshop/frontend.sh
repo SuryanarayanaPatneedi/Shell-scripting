@@ -23,7 +23,7 @@ cd /usr/share/nginx/html  &>>$LOG &&  rm -rf * &>>$LOG
 STAT_CHECK $?
 
 print "Extract Frontend Archive"
-unzip /tmp/frontend.zip &>>LOG &&  mv frontend-main/* . &>>$LOG && mv static/* . &>> &&  rm -rf frontend-master static &>>LOG
+unzip /tmp/frontend.zip &>>LOG &&  mv frontend-main/* . &>>$LOG && mv static/* . &>>LOG &&  rm -rf frontend-master static &>>LOG
 STAT_CHECK $?
 
 print " copy Roboshop config\t"
