@@ -3,7 +3,7 @@
 source common.sh
 
 print "Installing Nginx"
-yumm install nginx -y  >>$LOG
+yum install nginx -y  >>$LOG
 STAT_CHECK $?
 
 
