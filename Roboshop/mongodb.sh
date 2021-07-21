@@ -19,13 +19,13 @@ print "updating Mongodb listen  Address"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 STAT_CHECK $?
 
-print "Start mongodb service"
+print "Start mongodb service\t"
 systemctl enable mongod &>>LOG && systemctl start mongod &>>LOG
 
-print "Downloading mongodb schema "
+print "Downloading mongodb schema\t"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"  &>>LOG
 STAT_CHECK $?
 
-print "Load mongodb schema"
+print "Load mongodb schema\t"
 cd /tmp && unzip -o  mongodb.zip &>>$LOG && cd mongodb-main && mongo < catalogue.js &>>$LOG && mongo < users.js &>>$LOG
 
