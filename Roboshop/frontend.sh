@@ -22,7 +22,7 @@ print "Removing htDoc\t"
 cd /usr/share/nginx/html  &>>$LOG &&  rm -rf * &>>$LOG
 STAT_CHECK $?
 
-PRINT "Extract Frontend Archive"
+print "Extract Frontend Archive"
 unzip /tmp/frontend.zip &>>LOG &&  mv frontend-main/* . &>>$LOG && mv static/* . &>> &&  rm -rf frontend-master static &>>LOG
 STAT_CHECK $?
 
