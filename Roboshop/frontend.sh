@@ -18,7 +18,7 @@ print "Downloading Frontend "
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG
 STAT_CHECK $?
 
-print "Removing htDoc"
+print "Removing htDoc\t"
 cd /usr/share/nginx/html  &>>$LOG &&  rm -rf * &>>$LOG
 STAT_CHECK $?
 
