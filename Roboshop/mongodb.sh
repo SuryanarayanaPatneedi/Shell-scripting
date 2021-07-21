@@ -21,6 +21,7 @@ STAT_CHECK $?
 
 print "Start mongodb service\t"
 systemctl enable mongod &>>LOG && systemctl start mongod &>>LOG
+STAT_CHECK $?
 
 print "Downloading mongodb schema\t"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"  &>>LOG
