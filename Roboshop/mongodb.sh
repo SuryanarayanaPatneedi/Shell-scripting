@@ -26,4 +26,4 @@ curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongo
 STAT_CHECK $?
 
 print "Load mongodb schema"
-cd /tmp && unzip mongodb.zip && cd mongodb-main  && mongo < catalogue.js && mongo < users.js
+cd /tmp && -o  unzip mongodb.zip && cd mongodb-main  && mongo < catalogue.js && mongo < users.js
