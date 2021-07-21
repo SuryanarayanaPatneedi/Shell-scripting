@@ -10,7 +10,6 @@ if [$? -eq 0 ]; then
 else
   echo fail
 fi
-
 echo  -n -e "Enabling Nginx\t\t\t..."
 systemctl enable nginx >>$LOG
 if [$? -eq 0]; then
