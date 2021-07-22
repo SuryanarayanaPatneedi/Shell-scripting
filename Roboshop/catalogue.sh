@@ -11,7 +11,7 @@ if [$? -ne 0]; then
 useradd roboshop &>>LOG
 fi
 STAT_CHECK $?
-
+#*
 print "Download application code"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>LOG
 STAT_CHECK $?
