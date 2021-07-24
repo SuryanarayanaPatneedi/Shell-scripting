@@ -20,3 +20,10 @@ variable "number" {
 output "printingnumber" {
   value = var.number
 }
+variable "boolean" {
+  default = true
+}
+
+output "declare boolean" {
+  value =var.boolean
+}
