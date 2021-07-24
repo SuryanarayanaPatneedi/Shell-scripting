@@ -12,3 +12,11 @@ variable "sample2" {
 output "sample2" {
   value = var.sample2
 }
+
+variable "number" {
+  default = 100
+}
+
+output "printingnumber" {
+  value = var.number
+}
