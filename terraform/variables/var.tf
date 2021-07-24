@@ -24,6 +24,6 @@ variable "boolean" {
   default = true
 }
 
-output "declare boolean" {
+output "declareboolean" {
   value =var.boolean
 }
