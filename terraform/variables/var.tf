@@ -9,6 +9,6 @@ variable "sample2" {
   default = "Narayana"
 }
 
-output "sample" {
+output "sample2" {
   value = var.sample2
 }
