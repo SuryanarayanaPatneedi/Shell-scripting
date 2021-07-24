@@ -27,3 +27,31 @@ variable "boolean" {
 output "declareboolean" {
   value =var.boolean
 }
+
+
+variable "list" {
+  default = [
+    "Hellow",
+    100,
+    true
+  ]
+}
+
+output "listdeclare" {
+  value = var.list
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
