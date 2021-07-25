@@ -41,6 +41,27 @@ output "listdeclare" {
   value = var.list
 }
 
+variable "" {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
