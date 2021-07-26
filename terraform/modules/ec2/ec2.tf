@@ -11,4 +11,8 @@ resource "aws_instance" "sample" {
 
 variable "SG_ID"{}
 
+output "private_ip" {
+  value = "aws_instance.sample.*.private_ip"
+}
+
 
