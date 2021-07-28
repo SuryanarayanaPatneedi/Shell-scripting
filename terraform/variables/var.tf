@@ -39,3 +39,22 @@ output "sample4" {
 output "data-types" {
   value = "string= ${var.sample2} ,  number =${var.sample3} , boolen =${var.sample4}"
 }
+
+
+variable "training" {
+  default =["AWS","DEVOPS"]
+}
+
+variable "trainings" {
+  default = {
+    aws= "6Am IST"
+    devops="10am ist"
+  }
+}
+output "training" {
+  value = var.training
+}
+
+output "training" {
+  value = var.trainings
+}
