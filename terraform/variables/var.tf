@@ -35,3 +35,7 @@ output "sample3" {
 output "sample4" {
   value = var.sample4
 }
+
+output "data-types" {
+  value = "string= ${var.sample2} ,  number =${var.sample3} , boolen =${var.sample4}"
+}
