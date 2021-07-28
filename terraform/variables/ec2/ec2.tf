@@ -8,7 +8,7 @@ resource "aws_security_group" "allow_ssh" {
     from_port        = 22
     to_port          = 22
     protocol         = "ssh"
-    cidr_blocks      = [0.0.0.0/0]
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   egress {
@@ -30,3 +30,4 @@ output "sg_attibutes" {
 provider "aws" {
   region = "us-est-1"
 }
+#
