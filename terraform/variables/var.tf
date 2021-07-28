@@ -69,3 +69,8 @@ output "trainingsss" {
 output "samething" {
   value = "AWS-timing-${var.trainings["aws"]}"
 }
+variable "fruites" {}
+
+output "fruites" {
+  value = var.fruites
+}
