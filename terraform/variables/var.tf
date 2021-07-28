@@ -6,22 +6,22 @@ output "sample" {
   value = var.sample
 }
 
-variable "sample2"{}
+variable "sample1"{}
 
-output "sample2" {
-  value = var.sample2
+output "sample1" {
+  value = var.sample1
 }
 
-output "sample2" {
-  value = "Hellow"
+variable "sample2" {
+  default= "Hellow"
 }
 
 variable "sample3" {
-  value = 100
+  default= 100
 }
 
 variable "sample4" {
-  value= true
+  default= true
 }
 
 
