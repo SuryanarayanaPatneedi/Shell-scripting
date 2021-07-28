@@ -67,5 +67,5 @@ output "trainingsss" {
 }
 
 output "samething" {
-  value = "AWS-timing-"${var.trainings["aws"]}
+  value = "{AWS-timing-"${var.trainings["aws"]}
 }
