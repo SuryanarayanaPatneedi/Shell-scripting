@@ -9,3 +9,7 @@ resource "aws_instance" "sample" {
 }
 
 variable "sg_id" {}
+
+output "privateip" {
+  value = aws_instance.sample.private_ip
+}

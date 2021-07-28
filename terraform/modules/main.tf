@@ -9,3 +9,7 @@ module "ec2" {
 provider "aws" {
   region = "us-east-1"
 }
+
+output "privateip" {
+  value = module.ec2.privateip
+}
