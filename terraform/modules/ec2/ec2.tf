@@ -1,18 +1,11 @@
 resource "aws_instance" "sample" {
-  count                 = 2
-  ami                   = "ami-074df373d6bafa625"
-  instance_type         = "t3.micro"
-  vpc_security_group_ids = [var.SG_ID]
+  ami           = "ami-074df373d6bafa625"
+  vpc_security_group_ids = var.sg_id
+  instance_type = "t3.micro"
 
-  tags                  = {
-    Name                = "Sample"
+  tags = {
+    Name = "HelloWorld"
   }
 }
 
-variable "SG_ID"{}
-
-output "private_ip" {
-  value = "aws_instance.sample.*.private_ip"
-}
-
-
+variable "sg_id" {}
