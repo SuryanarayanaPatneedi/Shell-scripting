@@ -58,3 +58,14 @@ output "training" {
 output "trainings" {
   value = var.trainings
 }
+output "trainingss" {
+  value = var.training[0]
+}
+
+output "trainingss" {
+  value = var.training[1]
+}
+
+output "samething" {
+  value = var.trainings[aws]
+}
