@@ -1,20 +1,20 @@
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
-  description = "Allow TLS inbound traffic"
+  description = "allow_ssh"
 
 
   ingress {
     description      = "ssh"
     from_port        = 22
     to_port          = 22
-    protocol         = "ssh"
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
   egress {
     from_port        = 0
     to_port          = 0
-    protocol         = "-1"
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
@@ -23,11 +23,10 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-output "sg_attibutes" {
+output "sg-attibutes" {
   value = aws_security_group.allow_ssh
 }
 
 provider "aws" {
   region = "us-east-1"
 }
-#
