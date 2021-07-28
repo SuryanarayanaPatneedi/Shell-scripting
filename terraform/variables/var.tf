@@ -55,6 +55,6 @@ output "training" {
   value = var.training
 }
 
-output "training" {
+output "trainings" {
   value = var.trainings
 }
