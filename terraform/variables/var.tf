@@ -1,16 +1,16 @@
-variable "sample" {
-  default = "Hellow world"
-}
+#  variable "sample" {
+ # default = "Hellow world"
+#}
 
-output "sample" {
-  value = var.sample
-}
+#output "sample" {
+ # value = var.sample
+#}
 
-variable "sample1"{}
+#variable "sample1"{}
 
-output "sample1" {
-  value = var.sample1
-}
+#output "sample1" {
+#  value = var.sample1
+#}
 
 variable "sample2" {
   default= "Hellow"
