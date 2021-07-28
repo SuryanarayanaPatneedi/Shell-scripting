@@ -62,7 +62,7 @@ output "trainingss" {
   value = var.training[0]
 }
 
-output "trainingss" {
+output "trainingsss" {
   value = var.training[1]
 }
 
