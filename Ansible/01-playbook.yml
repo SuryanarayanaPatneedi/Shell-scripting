@@ -6,6 +6,7 @@
         msg: Hello World
 
     - name : print my name
+      hosts: all
       debug :
         msg: "Suryanarayana"
 
