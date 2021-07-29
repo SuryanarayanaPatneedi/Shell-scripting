@@ -14,7 +14,7 @@
 
 - name: demo on variable from file
   hosts: all
-  vars_file:
+  vars_files:
         - example-vars.yml
   tasks:
    - name: print variable
