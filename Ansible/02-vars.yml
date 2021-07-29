@@ -6,11 +6,11 @@
     - name: print variable
       debug:
         msg: URL = {{ URL }}
-    - name: print variable on task
+    - name: Print variable from task
       vars:
-      URL : task.exampke.com
+       URL: task.example.com
       debug:
-        msg: URL = {{URL}}
+          msg: URL = {{ URL }}
 
 
 
