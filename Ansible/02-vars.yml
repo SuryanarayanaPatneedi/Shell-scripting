@@ -12,6 +12,16 @@
       debug:
           msg: URL = {{ URL }}
 
+- name: demo on variable from file
+    hosts: all
+      vars_file:
+        - example-vars.yml
+
+        vars:
+
+        debug:
+          msg: URL = {{ URL }}
+
 
 
 
