@@ -3,7 +3,7 @@
   vars:
     URL: play.example.com
   tasks:
-    - name : print variable
+    - name: print variable
       debug:
         msg: URL = {{ URL }}
     - name: print var on task level
