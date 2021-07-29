@@ -5,8 +5,8 @@
       debug: #{ msg: "Hello World" }
         msg: Hello World
 
-    - name : print my name
+    - name: print my name
       hosts: all
-      debug :
+      debug:
         msg: "Suryanarayana"
 
