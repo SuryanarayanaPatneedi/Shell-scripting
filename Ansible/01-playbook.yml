@@ -5,3 +5,7 @@
       debug: #{ msg: "Hello World" }
         msg: Hello World
 
+    - name : print my name
+      debug :
+        msg: "Suryanarayana"
+
