@@ -14,13 +14,12 @@
 
 - name: demo on variable from file
     hosts: all
-      vars_file:
+    vars_file:
         - example-vars.yml
-
-        vars:
-
-        debug:
-          msg: URL = {{ URL }}
+    tasks:
+   - name: print variable
+     debug:
+      msg: URL = {{ URL }}
 
 
 
