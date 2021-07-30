@@ -6,4 +6,4 @@ yum install nginx -y >$LOG
 echo  "Enabling Nginx"
 systemctl enable nginx
 echo "Starting nginx"
-systemctl start nginx ->$LOG
+systemctl start nginx >$LOG
