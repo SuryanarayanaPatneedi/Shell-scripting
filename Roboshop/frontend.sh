@@ -7,7 +7,7 @@ echo -e "Instaling Nginx\t\t.."
 yum install nginx -y &>>$LOG
 if [ $? -eq 0 ] ; then
   echo -e "\e[32m done\e[0m"
-   done
+
   else
     echo fail
     fi
