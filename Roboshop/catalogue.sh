@@ -21,7 +21,12 @@ PRINT "Installing nodejs dependencies"
 cd /home/roboshop/catalogue && npm install --unsafe-perm &>>LOG
 STAT_CHECK $?
 
-# mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
-# systemctl daemon-reload
-# systemctl start catalogue
-# systemctl enable catalogue
+PRINT "FIX application permissions"
+chown roboshop:roboshop /home/roboshop -R &>>LOG
+STAT_CHECK $?
+PRINT "Update Systemd file"
+sed   -i -e "s/MONGO_DNSNAME/mongodb.roboshop.internal/" /home/roboshop/catalogue/systemd.service &&  mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+STAT_CHECK $?
+PRINT "Start catalogue service"
+systemctl daemon-reload && systemctl start catalogue &&  systemctl enable catalogue
+STAT_CHECK $?
