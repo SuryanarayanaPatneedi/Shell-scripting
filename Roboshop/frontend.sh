@@ -10,15 +10,18 @@ else
     exit 1
     fi
 }
+PRINT(){
+  echo -n -e "$1\t\t.."
+}
 
-echo -e "Installing Nginx\t\t.."
+PRINT "Installing Nginx"
 yum install nginx -y &>>$LOG
 STATUS_CHECK $?
 
-echo -e "Enabling Nginx\t\t.."
+PRINT "Enabling Nginx"
 systemctl enable nginx  &>>$LOG
 STATUS_CHECK $?
-echo -e   "Starting  Nginx\t\t.."
+PRINT   "Starting  Nginx"
 
 systemctl restart nginx  &>>$LOG
 STATUS_CHECK $?
