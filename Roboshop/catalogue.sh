@@ -14,8 +14,13 @@ PRINT "Add RoboShop Application User"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>LOG
 STAT_CHECK $?
 PRINT "Extract Downloaded code"
-cd /home/roboshop  && unzip -o  /tmp/catalogue.zip  &&  mv catalogue-main catalogue  && cd /home/roboshop/catalogue && npm install
+cd /home/roboshop  && unzip -o  /tmp/catalogue.zip &>>LOG  &&  rm -f catalogue && &>>LOG mv catalogue-main catalogue
 STAT_CHECK $?
+
+PRINT "Installing nodejs dependencies"
+cd /home/roboshop/catalogue && npm install --unsafe-perm &>>LOG
+STAT_CHECK $?
+
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
 # systemctl start catalogue
