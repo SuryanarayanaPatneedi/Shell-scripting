@@ -1,5 +1,4 @@
 #!/bin/bash
-
 LOG=/tmp/roboshop.lg
 rm -f $LOG
 
