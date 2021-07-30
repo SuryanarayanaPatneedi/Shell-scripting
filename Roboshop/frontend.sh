@@ -1,6 +1,7 @@
 #!/bin/bash
 
 LOG=/tmp/roboshop.lg
+rm -f $LOG
 
 echo -e "Instaling Nginx\t\t...\t\e[32mdone\e[0m"
 yum install nginx -y &>>$LOG
