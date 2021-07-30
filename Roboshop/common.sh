@@ -34,3 +34,19 @@ SETUP_SYSTEMD() {
   STAT_CHECK $?
 }
 
+NODEJS() {
+  PRINT "Install NodeJS\t\t"
+  yum install nodejs make gcc-c++ -y &>>$LOG
+  STAT_CHECK $?
+
+  ADD_APPLICATION_USER
+  DOWNLOAD_APP_CODE
+
+  PRINT "Install NodeJS Dependencies"
+  cd /home/roboshop/${COMPONENT} && npm install --unsafe-perm &>>$LOG
+  STAT_CHECK $?
+
+  PERM_FIX
+  SETUP_SYSTEMD
+}
+
