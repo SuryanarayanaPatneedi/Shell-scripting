@@ -14,7 +14,7 @@ PRINT "Add RoboShop Application User"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>LOG
 STAT_CHECK $?
 PRINT "Extract Downloaded code"
-cd /home/roboshop  && unzip -o  /tmp/catalogue.zip &>>LOG  &&  rm -f catalogue && &>>LOG mv catalogue-main catalogue
+cd /home/roboshop  && unzip -o  /tmp/catalogue.zip &>>LOG  &&  rm -rf catalogue && &>>LOG mv catalogue-main catalogue
 STAT_CHECK $?
 
 PRINT "Installing nodejs dependencies"
