@@ -29,3 +29,4 @@ fi
 rabbitmqctl set_user_tags roboshop administrator &>>$LOG  && rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG
 STAT_CHECK $?
 
+
