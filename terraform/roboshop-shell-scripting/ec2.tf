@@ -37,12 +37,12 @@ resource "null_resource" "run-shell-scripting" {
       password              = "DevOps321"
     }
 
-    inline = [
-      "cd /home/centos",
-      "git clone https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps57/_git/shell-scripting",
-      "cd shell-scripting/roboshop",
-      "sudo make ${element(var.COMPONENTS, count.index)}"
-    ]
+    #inline = [
+      #"cd /home/centos",
+      #"git clone https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps57/_git/shell-scripting",
+      #"cd shell-scripting/roboshop",
+      #"sudo make ${element(var.COMPONENTS, count.index)}"
+    #]
   }
 }
 
