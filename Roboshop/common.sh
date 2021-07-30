@@ -11,7 +11,7 @@ fi
 LOG=/tmp/roboshop.lg
 rm -f $LOG
 
-STATUS_CHECK(){
+STAT_CHECK(){
   if [ $1 -eq 0 ] ; then
   echo -e "\e[32m done\e[0m"
 else
