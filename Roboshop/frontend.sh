@@ -28,4 +28,4 @@ STAT_CHECK $?
 PRINT   "Starting  Nginx"
 
 systemctl restart nginx  &>>$LOG
-STATU_CHECK $?
+STAT_CHECK $?
