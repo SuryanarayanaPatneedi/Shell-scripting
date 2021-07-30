@@ -38,7 +38,7 @@ resource "null_resource" "run-shell-scripting" {
     }
 
     inline = [
-      #"cd /home/centos",
+      "cd /home/centos",
       "git clone https:/https://github.com/SuryanarayanaPatneedi/Shell-scripting.git"
       "cd terraform "
       "cd shell-scripting/roboshop",
