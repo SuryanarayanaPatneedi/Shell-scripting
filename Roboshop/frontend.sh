@@ -19,7 +19,7 @@ else
     echo -e "\e[32m fail\e[0m"
     fi
 echo -e   "Starting  Nginx\t\t.."
-systemctl start nginx  &>>$LOG
+systemctl restart nginx  &>>$LOG
 if [ $? -eq 0 ] ; then
   echo -e "\e[32m done\e[0m"
   else
