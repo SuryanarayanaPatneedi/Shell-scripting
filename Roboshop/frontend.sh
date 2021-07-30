@@ -7,4 +7,4 @@ echo "Enabling Nginx\t\t"
 systemctl enable nginx  &>>$LOG
 
 echo "Starting Nginx\t\t"
-systemctl restart nginx  &>>$LOG
+systemctl start nginx  &>>$LOG
