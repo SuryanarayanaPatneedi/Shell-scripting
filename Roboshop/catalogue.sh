@@ -15,6 +15,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 STAT_CHECK $?
 PRINT "Extract Downloaded code"
 cd /home/roboshop  && unzip -o  /tmp/catalogue.zip  &&  mv catalogue-main catalogue  && cd /home/roboshop/catalogue && npm install
+STAT_CHECK $?
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
 # systemctl start catalogue
