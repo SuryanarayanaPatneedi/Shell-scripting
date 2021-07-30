@@ -15,8 +15,11 @@ STAT_CHECK $?
 PRINT "Extract"
 unzip /tmp/frontend.zip  &>>$LOG &&  mv frontend-main/* . &>>$LOG && mv static/* . &>>$LOG &&  rm -rf frontend-master static &>>$LOG
 STATU_CHECK $?
-PRINT "Update roboshop config"
+PRINT "copy roboshop config"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>LOG
+STAT_CHECK $?
+PRINT "update roboshop config"
+sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' /etc/nginx/default.d/roboshop.conf &>>LOG
 STAT_CHECK $?
 
 PRINT "Enabling Nginx"
