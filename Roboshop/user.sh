@@ -3,4 +3,4 @@
 source common.sh
 
 COMPONENT=user
-NODEJ
+NODEJS
