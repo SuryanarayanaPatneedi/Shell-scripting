@@ -30,3 +30,4 @@ STAT_CHECK $?
 PRINT "Load Schema\t\t"
 cd /tmp && unzip -o  mongodb.zip &>>$LOG && cd mongodb-main && mongo < catalogue.js &>>$LOG && mongo < users.js &>>$LOG
 STAT_CHECK $?
+
